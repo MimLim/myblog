@@ -20,7 +20,7 @@
 
     <style>
         body {
-            background: url("/images/4.jpg") no-repeat center fixed;
+            background: url("/assets/images/4.jpg") no-repeat center fixed;
         }
 
         .content {
@@ -44,7 +44,7 @@
 <div class="content">
     <!-- logo -->
     <div class="row">
-        <img src="images/2.gif">
+        <img src="/assets/images/2.gif">
     </div>
     <!--表单-->
     <div class="row" style="margin-top: 50px">
@@ -58,7 +58,7 @@
             <div class="tab-content">
                 <!--普通登录-->
                 <div class="tab-pane fade in active" id="account-login">
-                    <form id="normal_form" name="form" role="form" class="login-form" action="${ctx}/doLogin"
+                    <form id="normal_form" name="form" role="form" class="login-form" action="${path}/doLogin"
                           method="post">
                         <div class="form-group">
                             <label for="username" class="sr-only">用户名</label>
@@ -78,7 +78,7 @@
 
                         <div>
                             <img id="captchaImg" style="CURSOR: pointer" onclick="changeCaptcha()"
-                                 title="看不清楚?请点击刷新验证码!" align='absmiddle' src="${ctx}/captchaServlet"
+                                 title="看不清楚?请点击刷新验证码!" align='absmiddle' src="${path}/captchaServlet"
                                  height="18" width="55">
                             <a href="javascript:;"
                                onClick="changeCaptcha()" style="color: #666;">看不清楚</a> <span id="code_span"
@@ -112,7 +112,7 @@
                             <div>
                                 <div style="float: left;"><p>使用其它账号登录&nbsp;&nbsp;&nbsp;</p></div>
                                 <div style="margin-left: 20px"><a href="to_login"><img
-                                        src="${ctx}/images/Connect_logo_1.png"></a></div>
+                                        src="${path}/assets/images/Connect_logo_1.png"></a></div>
                             </div>
                             <div style="margin-left: 26px;float: right"><a href="register.jsp">立即注册</a></div>
                         </div>
@@ -120,7 +120,7 @@
                 </div>
                 <!--手机登录-->
                 <div class="tab-pane fade" id="phone-login">
-                    <form role="form" class="login-form form-horizontal" id="phone_form" action="${ctx}/phoneLogin"
+                    <form role="form" class="login-form form-horizontal" id="phone_form" action="${path}/phoneLogin"
                           method="post">
                         <div class="form-group">
                             <label for="username" class="sr-only">用户名</label>
@@ -205,7 +205,7 @@
 
     //更换验证码
     function changeCaptcha() {
-        $("#captchaImg").attr('src', '${ctx}/captchaServlet?t=' + (new Date().getTime()));
+        $("#captchaImg").attr('src', '${path}/captchaServlet?t=' + (new Date().getTime()));
     }
 
     //验证码校验
@@ -337,7 +337,7 @@
 
                 $.ajax({
                     method: 'POST',
-                    url: '${ctx}/sendSms',// 发送验证码给ActiveQM, 同时保存验证码到redis数据库
+                    url: '${path}/sendSms',// 发送验证码给ActiveQM, 同时保存验证码到redis数据库
                     data: {
                         telephone: telephone
                     },

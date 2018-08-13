@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService{
 
-@Autowired
-private UserDao userDao;
+    @Autowired
+    private UserDao userDao;
+
     @Override
     public int regist(User user) {
         return 0;

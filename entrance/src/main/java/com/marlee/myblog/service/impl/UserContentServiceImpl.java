@@ -4,7 +4,9 @@ import com.marlee.myblog.common.PageHelper;
 import com.marlee.myblog.entity.Comment;
 import com.marlee.myblog.entity.UserContent;
 import com.marlee.myblog.service.UserContentService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserContentServiceImpl implements UserContentService {
     @Override
     public PageHelper.Page<UserContent> findAll(UserContent content, Integer pageNum, Integer pageSize) {
