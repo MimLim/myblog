@@ -1,6 +1,9 @@
 package com.marlee.myblog.controller;
 
+import com.marlee.myblog.common.PageHelper;
+import com.marlee.myblog.entity.Comment;
 import com.marlee.myblog.entity.User;
+import com.marlee.myblog.entity.UserContent;
 import com.marlee.myblog.service.UserContentService;
 import com.marlee.myblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Component
 public class BaseController {
@@ -49,6 +53,35 @@ public class BaseController {
         return user;
     }
 
+
+    public List<UserContent> getUserContentList(Long uid){
+        List<UserContent> list = userContentService.findByUserId( uid );
+        return list;
+    }
+
+    public List<UserContent> getAllUserContentList(){
+        List<UserContent> list = userContentService.findAll();
+        return list;
+    }
+    public PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize){
+        PageHelper.Page<UserContent> page = userContentService.findAll(pageNum ,pageSize);
+        return page;
+    }
+
+    public PageHelper.Page<UserContent> findAll(UserContent content, Integer pageNum, Integer pageSize){
+        PageHelper.Page<UserContent> page = userContentService.findAll( content,pageNum ,pageSize);
+        return page;
+    }
+
+    public PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize){
+        PageHelper.Page<UserContent> page = userContentService.findAll( content,comment,pageNum ,pageSize);
+        return page;
+    }
+
+    public PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize){
+        PageHelper.Page<UserContent> page = userContentService.findAllByUpvote( content,pageNum ,pageSize);
+        return page;
+    }
 
     /**
      * 获取request
@@ -95,5 +128,31 @@ public class BaseController {
         return request.getRemoteAddr();
     }
 
+
+    /**
+     * 获取当前用户
+     * @return
+     */
+    public User getCurrentUser(){
+        User user = null;
+//        Authentication authentication = null;
+//        SecurityContext context = SecurityContextHolder.getContext();
+//        if(context!=null){
+//            authentication = context.getAuthentication();
+//        }
+//        if(authentication!=null){
+//            Object principal = authentication.getPrincipal();
+//            if(principal instanceof OpenUser){
+//                user = ((OpenUser) principal).getUser();
+//            }else if(authentication.getPrincipal().toString().equals( "anonymousUser" )){
+//                //如果是匿名用户
+//                return null;
+//            }else {
+//                user = (User)principal;
+//            }
+//
+//        }
+        return user;
+    }
 
 }

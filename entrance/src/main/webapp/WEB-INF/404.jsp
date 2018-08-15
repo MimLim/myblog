@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>404 - 对不起，您查找的页面不存在！</title>
-<link rel="stylesheet" type="text/css" href="${ctx}/css/404/main.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/assets/css/404/main.css">
 
 </head>
 <body>

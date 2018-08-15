@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" isErrorPage="true" %>
 <% response.setStatus(HttpServletResponse.SC_OK); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="${pageContext.request.contextPath }"/>
+<c:set var="path" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
     <title>500页面</title>
     <style type="text/css">
         a { color:#555}
-        html { height: 100%; width: 100%; background: url(${ctx}/images/bj.png) repeat; }
+        html { height: 100%; width: 100%; background: url(${path}/assets/images/bj.png) repeat; }
         body {margin: 0px auto;}
         .cw404 { width:755px; margin: 0px auto; }
         .cw404_nr { height: 284px; width: 750px; background: #e5e5e5; border: 1px solid #aaaaaa; margin: 0px auto; }
@@ -33,7 +33,7 @@
 <body>
 <div class="cw404">
     <div class="cw404_top">
-        <div class="top_left"><img src="${ctx}/images/500.png"></div>
+        <div class="top_left"><img src="${path}/assets/images/500.png"></div>
 
         <div class="top_right">500</div>
     </div>

@@ -14,15 +14,15 @@
 <head>
     <meta charset="UTF-8">
     <title>个人空间</title>
-    <link href="${path}/css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="${path}/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="${path}/assets/css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="${path}/assets/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
 
-    <link href="${path}/css/zui/css/zui.min.css" rel="stylesheet"/>
-    <link href="${path}/css/zui/css/zui-theme.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="${path}/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="${path}/css/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="${path}/css/zui/js/zui.min.js"></script>
-    <script src="${path}/css/zui/lib/kindeditor/kindeditor.min.js"></script>
+    <link href="${path}/assets/css/zui/css/zui.min.css" rel="stylesheet"/>
+    <link href="${path}/assets/css/zui/css/zui-theme.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="${path}/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="${path}/assets/css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${path}/assets/css/zui/js/zui.min.js"></script>
+    <script src="${path}/assets/css/zui/lib/kindeditor/kindeditor.min.js"></script>
     <style>
         body,html{
             background-color: #EBEBEB;
