@@ -20,7 +20,7 @@
 
     <style>
         body {
-            background: url("/assets/images/4.jpg") no-repeat center fixed;
+            background: url("/assets/images/login-background.jpg") no-repeat center fixed;
         }
 
         .content {
@@ -34,8 +34,11 @@
             padding: 40px;
         }
 
-        .login-form, .form-group {
+         .form-group {
             margin-top: 20px;
+        }
+        .login-form{
+            margin-top: 40px;
         }
     </style>
 
@@ -43,11 +46,13 @@
 <body>
 <div class="content">
     <!-- logo -->
+    <!--
     <div class="row">
         <img src="/assets/images/2.gif">
     </div>
+    -->
     <!--表单-->
-    <div class="row" style="margin-top: 50px">
+    <div class="row" style="margin-top: 132px">
         <div class="col-sm-6 col-sm-offset-3 col-md-4 col-sm-offset-4 login-box">
             <!--标签页，两种登录方式-->
             <ul class="nav nav-secondary nav-justified" id="ap_login">
@@ -70,6 +75,7 @@
                             <input type="password" id="password" name="password" onblur="checkPassword();"
                                    value="${password}" class="form-control" placeholder="密码">
                         </div>
+                        <!--
                         <div class="form-group">
                             <label for="code" class="sr-only">验证码</label>
                             <input type="text" id="code" name="code" class="form-control" placeholder="验证码"
@@ -84,8 +90,9 @@
                                onClick="changeCaptcha()" style="color: #666;">看不清楚</a> <span id="code_span"
                                                                                              style="color: red"></span>
                         </div>
+                        -->
+                        <!--
                         <div class="form-group">
-                            <!-- 多选框 -->
                             <div class="checkbox">
                                 <label>
                                     <br/>
@@ -104,16 +111,27 @@
                                 </label>
                             </div>
                         </div>
+                        -->
+                        <div class="form-group" style="height: 26px">
+                            <!-- 多选框 -->
+                            <div class="checkbox col-xs-12" style="float: left">
+                                <label style="margin-left: -10px;margin-top: -7px">
+                                    <input type="checkbox" name="hobbies"> 记住登录状态
+
+                                </label>
+                            </div>
+                            <div style="float: right;margin-top: -31px">
+                                <a>忘记密码</a>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <button type="button" id="btn" class="btn btn-primary btn-block" onclick="normal_login();">
                                 登录
                             </button>
                             <br/>
-                            <div>
-                                <div style="float: left;"><p>使用其它账号登录&nbsp;&nbsp;&nbsp;</p></div>
-                                <div style="margin-left: 20px"><a href="to_login"><img
+                            <div style="float: left"><p>使用其它账号登录&nbsp;&nbsp;&nbsp;</p></div>
+                            <div style="float: left"><a href="to_login"><img
                                         src="${path}/assets/images/Connect_logo_1.png"></a></div>
-                            </div>
                             <div style="margin-left: 26px;float: right"><a href="register.jsp">立即注册</a></div>
                         </div>
                     </form>
@@ -142,7 +160,7 @@
                         </div>
                         <div class="form-group">
                             <!-- 多选框 -->
-                            <div class="checkbox col-xs-12">
+                            <div class="checkbox col-xs-12" style="float: left">
                                 <label>
                                     <input type="checkbox" name="hobbies"> 记住登录状态
 
@@ -154,7 +172,10 @@
                             <div class="col-xs-12">
                                 <button type="button" id="phone_btn" class="btn btn-primary btn-block">登录</button>
                                 <br/>
-                                <div style="margin-left: 260px"><a href="register.jsp">立即注册</a></div>
+                                <div style="float: left"><p>使用其它账号登录&nbsp;&nbsp;&nbsp;</p></div>
+                                <div style="float: left"><a href="to_login"><img
+                                        src="${path}/assets/images/Connect_logo_1.png"></a></div>
+                                <div style="float: right;margin-right: 3px"><a href="register.jsp">立即注册</a></div>
                             </div>
                         </div>
                     </form>

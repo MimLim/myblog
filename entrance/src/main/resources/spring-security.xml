@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+    <!-- 该路径下的资源不用过滤 -->
+    <security:http security="none" pattern="/assets/**" />
+    <security:http security="none" pattern="/login*" />
+    <security:http security="none" pattern="/to_login" />
+    <security:http security="none" pattern="/checkCode"/>
+    <security:http security="none" pattern="/checkEmail"/>
+    <security:http security="none" pattern="/checkPhone"/>
+    <security:http security="none" pattern="/captchaServlet"/>
+    <security:http security="none" pattern="/activecode*"/>
+    <security:http security="none" pattern="/sendEmail*"/>
+    <security:http security="none" pattern="/register*" />
+    <security:http security="none" pattern="/doRegister" />
+    <security:http security="none" pattern="/accessDenied"/>
+    <security:http security="none" pattern="/reply"/>
+
+
+
+</beans>

@@ -40,4 +40,38 @@ public interface UserContentService {
      * @return
      */
     PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize);
+
+    /**
+     * 根据文章id更新文章
+     *
+     * @param content
+     * @return
+     */
+    void updateById(UserContent content);
+
+    /**
+     * 根据文章id查找文章
+     *
+     * @param id
+     * @return
+     */
+    UserContent findById(long id);
+
+
+    /**
+     * 根据用户id查询出梦分类
+     * @param uid
+     * @return
+     */
+    List<UserContent> findCategoryByUid(Long uid);
+
+    /**
+     * 根据文章分类查询所有文章
+     * @param category
+     *  @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageHelper.Page<UserContent> findByCategory(String category, Long uid ,Integer pageNum, Integer pageSize);
+
 }

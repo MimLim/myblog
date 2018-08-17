@@ -39,4 +39,24 @@ public class UserContentServiceImpl implements UserContentService {
     public PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize) {
         return null;
     }
+
+    @Override
+    public void updateById(UserContent content) {
+
+    }
+
+    @Override
+    public UserContent findById(long id) {
+        return null;
+    }
+
+    @Override
+    public List<UserContent> findCategoryByUid(Long uid) {
+        return null;
+    }
+
+    @Override
+    public PageHelper.Page<UserContent> findByCategory(String category, Long uid, Integer pageNum, Integer pageSize) {
+        return null;
+    }
 }
